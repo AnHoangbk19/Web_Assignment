@@ -1,3 +1,120 @@
+
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-dark px-0">
+            <div class="row gx-0">
+                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="http://localhost/Web_Assignment/Home" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                        <div class="col-lg-7 px-5 text-start">
+                            <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                                <i class="fa fa-envelope text-primary me-2"></i>
+                                <p class="mb-0">info@example.com</p>
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2">
+                                <i class="fa fa-phone-alt text-primary me-2"></i>
+                                <p class="mb-0">+012 345 6789</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center py-2">
+                                <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="#" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="http://localhost/Web_Assignment/Home" class="nav-item nav-link">Home</a>
+                                <a href="http://localhost/Web_Assignment/About"class="nav-item nav-link">About</a>
+                                <a href="http://localhost/Web_Assignment/Service" class="nav-item nav-link">Services</a>
+                                <a href="http://localhost/Web_Assignment/Rooms" class="nav-item nav-link">Rooms</a>
+                                <a href="http://localhost/Web_Assignment/Booking" class="nav-item nav-link active">Booking</a>
+                                <a href="http://localhost/Web_Assignment/Contact" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                            <div class="button-user-login d-flex">
+                                <p class="m-0 border-end border-white"> 
+                                    <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#register">
+                                        Sign up
+                                    </button>
+                                </p>
+
+                                <!-- Modal register-->
+                                <form name="registerform" method="post" action="" >
+                                    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+                                        <div class="modal-dialog">     
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="registerLabel">Register</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p><input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname"></p>
+                                                    <p><input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname"></p>
+                                                    <p><input type="text" class="form-control" name="email" id="email" placeholder="Email"></p>
+                                                    <p><input type="text" class="form-control" name="username" id="username" placeholder="Username"></p>
+                                                    <p><input type="text" class="form-control" name="password" id="password" placeholder="Password"></p>                                  
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <input type="submit" class="btn btn-primary" name="buttonregister" value="Continue">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <p class="m-0"> 
+                                    <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#login">
+                                        Sign in <i class="fa fa-arrow-right ms-3"></i>
+                                    </button>
+                                </p>
+
+                                <!-- Modal login -->
+                                <form name="loginform" method="post" action="" >
+                                    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+                                        <div class="modal-dialog">     
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="loginLabel">Login</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p><input type="text" class="form-control" name="username" id="username" placeholder="Username"></p>
+                                                    <p><input type="text" class="form-control" name="password" id="password" placeholder="Password"></p>                                  
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <input type="submit" class="btn btn-primary" name="buttonlogin" value="Login">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
  <!-- Page Header Start -->
  <div class="container-fluid page-header mb-5 p-0" style="background-image: url(./assets/img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
@@ -98,16 +215,7 @@
                                           </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                            <label for="message">Special Request</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                    </div>
-                                </div>
-                            </form>
+                                
                         </div>
                     </div>
                 </div>

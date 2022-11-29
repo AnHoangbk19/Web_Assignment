@@ -1,6 +1,6 @@
 <?php
 class App{
-    protected $controller = "Booking";
+    protected $controller = "Home";
     protected $action = "show";
     protected $params = [];
     function __construct(){

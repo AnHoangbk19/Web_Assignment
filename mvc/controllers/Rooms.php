@@ -1,9 +1,8 @@
 <?php
-class Home extends Controller{
-
+class Rooms extends Controller{
     function show(){
         $this->view("content_layout",[
-            "page"=>"home"
+            "page"=>"rooms"
         ]);
     }
 }
