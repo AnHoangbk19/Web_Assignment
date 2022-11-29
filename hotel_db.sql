@@ -1,7 +1,7 @@
 CREATE DATABASE HOTEL_DB;
 USE HOTEL_DB;
 
--- Create Table 
+-- Create Booking Table 
 CREATE TABLE Booking(
     Email varchar(255) NOT NULL PRIMARY KEY,
     Name varchar(255) NOT NULL,
@@ -21,6 +21,7 @@ VALUES ('guest1@gmail.com', 'MIANMA ROCKET', '11/29/2022 1:38 PM','11/29/2022 1:
 INSERT INTO Booking
 VALUES ('guestABC@gmail.com', 'SANTA', '11/29/2022 1:38 PM','11/29/2022 1:38 PM', 'Adult 2','Child 2','Room 3', 'HO HO HO');
 
+-- Create Admin Table 
 CREATE TABLE `admin` (
 	username varchar(30) PRIMARY KEY,
     `password` varchar(30) NOT NULL,
@@ -28,7 +29,9 @@ CREATE TABLE `admin` (
     phone varchar(10) UNIQUE,
     exp_year int NOT NULL
 );
-INSERT INTO admin
+
+-- insert value
+INSERT INTO `admin`
 VALUES ('tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
     ('admin1', '654321', 'le nguyen', '0355578787', 21),
     ('admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
