@@ -36,3 +36,21 @@ VALUES ('tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
     ('admin1', '654321', 'le nguyen', '0355578787', 21),
     ('admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
     ('admin3', 'gfgfdg', 'le ha nguyen', '0998874562', 7);
+
+-- Create News Table 
+CREATE TABLE `news` (
+  `userPost` text NOT NULL,
+  `postTime` datetime NOT NULL,
+  `content` text NOT NULL,
+  `newsID` varchar(255) PRIMARY KEY
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- insert value
+INSERT INTO `news` (`userPost`, `postTime`, `content`, `newsID`) VALUES
+('Nguyễn Hữu Nhân', '2022-11-29 08:07:22', 'Insert news1 content', '1234'),
+('Lê Trí Nguyên', '2022-11-29 08:07:22', 'Insert news2 content', '5678'),
+('Hoàng An', '2022-11-29 08:07:22', 'Insert news3 content', '1256'),
+('Nguyễn Hữu Nhân', '2022-11-29 08:07:22', 'Insert news1 content', '1234'),
+('Lê Trí Nguyên', '2022-11-29 08:07:22', 'Insert news2 content', '5678'),
+('Hoàng An', '2022-11-29 08:07:22', 'Insert news3 content', '1256');
