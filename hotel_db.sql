@@ -1,7 +1,7 @@
 CREATE DATABASE HOTEL_DB;
 USE HOTEL_DB;
 
-
+-- Create Table 
 CREATE TABLE Booking(
     Email varchar(255) NOT NULL PRIMARY KEY,
     Name varchar(255) NOT NULL,
@@ -12,6 +12,8 @@ CREATE TABLE Booking(
     Room varchar(255) NOT NULL,
     Request varchar(255)
 );
+
+-- insert value
 INSERT INTO Booking
 VALUES ('abcxyz@gmail.com', 'VO TAN KIET', '11/29/2022 1:38 PM','11/29/2022 1:38 PM', 'Adult 1','Child 1','Room 1', 'YOLO');
 INSERT INTO Booking
