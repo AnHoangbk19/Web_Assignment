@@ -1,5 +1,5 @@
 <?php
-class Databse{
+class Database{
     public $connect;
     protected $servername = "localhost";
     protected $username = "root";
@@ -12,7 +12,5 @@ class Databse{
         mysqli_query($this->connect, "SET NAMES 'utf8'");
     }
 }
-
-
 
 ?>

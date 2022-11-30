@@ -158,35 +158,35 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form action = "./Booking/getBooking" method = "POST">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" name = "name" id="name" placeholder="Your Name" required>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <input type="email" class="form-control" name= "email" id="email" placeholder="Your Email" required>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
+                                            <input type="text" class="form-control datetimepicker-input" name = "checkin" id="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" required />
                                             <label for="checkin">Check In</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date4" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
+                                            <input type="text" class="form-control datetimepicker-input" name = "checkout" id="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" required />
                                             <label for="checkout">Check Out</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select1">
+                                            <select class="form-select" name = "adult" id="select1">
                                               <option value="1">Adult 1</option>
                                               <option value="2">Adult 2</option>
                                               <option value="3">Adult 3</option>
@@ -196,7 +196,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select2">
+                                            <select class="form-select" name = "child" id="select2">
                                               <option value="1">Child 1</option>
                                               <option value="2">Child 2</option>
                                               <option value="3">Child 3</option>
@@ -206,18 +206,25 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select3">
-                                              <option value="1">Room 1</option>
-                                              <option value="2">Room 2</option>
-                                              <option value="3">Room 3</option>
+                                            <select class="form-select" name = "room" id="select3">
+                                              <option value="Room 1">Room 1</option>
+                                              <option value="Room 2">Room 2</option>
+                                              <option value="Room 3">Room 3</option>
                                             </select>
                                             <label for="select3">Select A Room</label>
                                           </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Special Request" name = "request" id="message" style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
                                     </div>
-                                
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" name="booking" type="submit">Book Now</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

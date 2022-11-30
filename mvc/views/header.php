@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <base href="http://localhost/Web_Assignment/Home">
     <meta charset="utf-8">
     <title>Hotelier - Hotel HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">

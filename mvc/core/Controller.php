@@ -9,5 +9,9 @@ class Controller{
     public function view($view, $data=[]){
         require_once "./mvc/views/".$view.".php";
     }
+    public function alert($msg)
+	{
+		echo "<script type='text/javascript'>alert('$msg');</script>";
+	}
 }
 ?>
