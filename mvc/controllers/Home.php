@@ -1,9 +1,14 @@
 <?php
 class Home extends Controller{
 
-    function show(){
+    public function show(){
         $this->view("content_layout",[
             "page"=>"home"
+        ]);
+    }
+    public function Admin_show(){
+        $this->view("content_layout",[
+            "page"=>"admin/home"
         ]);
     }
 }

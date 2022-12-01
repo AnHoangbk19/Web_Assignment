@@ -5,6 +5,11 @@ class About extends Controller{
             "page"=>"about"
         ]);
     }
+    public function Admin_show(){
+        $this->view("content_layout",[
+            "page"=>"admin/about"
+        ]);
+    }
 }
 
 ?>

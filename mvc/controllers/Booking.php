@@ -7,7 +7,16 @@ class Booking extends Controller{
             "page"=>"booking"
         ]);
     }
-
+    public function Admin_show(){
+        $this->view("content_layout",[
+            "page"=>"admin/booking"
+        ]);
+    }
+    public function manage_booking(){
+        $this->view("content_layout",[
+            "page"=>"admin/managebooking"
+        ]);
+    }
     public function getBooking(){
         if(isset($_POST['booking'])){
             $name = $_POST['name'];

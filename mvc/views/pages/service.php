@@ -47,64 +47,11 @@
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                             <div class="button-user-login d-flex">
-                                <p class="m-0 border-end border-white"> 
-                                    <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#register">
-                                        Sign up
-                                    </button>
-                                </p>
-
-                                <!-- Modal register-->
-                                <form name="registerform" method="post" action="" >
-                                    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
-                                        <div class="modal-dialog">     
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="registerLabel">Register</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p><input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname"></p>
-                                                    <p><input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname"></p>
-                                                    <p><input type="text" class="form-control" name="email" id="email" placeholder="Email"></p>
-                                                    <p><input type="text" class="form-control" name="username" id="username" placeholder="Username"></p>
-                                                    <p><input type="text" class="form-control" name="password" id="password" placeholder="Password"></p>                                  
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <input type="submit" class="btn btn-primary" name="buttonregister" value="Continue">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-
                                 <p class="m-0"> 
-                                    <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#login">
+                                    <a href="http://localhost/Web_Assignment/Login"><button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#login">
                                         Sign in <i class="fa fa-arrow-right ms-3"></i>
-                                    </button>
+                                    </button></a>
                                 </p>
-
-                                <!-- Modal login -->
-                                <form name="loginform" method="post" action="" >
-                                    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
-                                        <div class="modal-dialog">     
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="loginLabel">Login</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p><input type="text" class="form-control" name="username" id="username" placeholder="Username"></p>
-                                                    <p><input type="text" class="form-control" name="password" id="password" placeholder="Password"></p>                                  
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <input type="submit" class="btn btn-primary" name="buttonlogin" value="Login">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </nav>

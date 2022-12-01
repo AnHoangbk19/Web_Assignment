@@ -5,6 +5,11 @@ class Service extends Controller{
             "page"=>"service"
         ]);
     }
+    public function Admin_show(){
+        $this->view("content_layout",[
+            "page"=>"admin/service"
+        ]);
+    }
 }
 
 ?>

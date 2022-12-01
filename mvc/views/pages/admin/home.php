@@ -45,14 +45,20 @@
                                 <a href="http://localhost/Web_Assignment/Contact" class="nav-item nav-link">Contact</a>
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
-                            <div class="button-user-login d-flex">
-                                <p class="m-0"> 
-                                    <a href="http://localhost/Web_Assignment/Login"><button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="modal" data-bs-target="#login">
-                                        Sign in <i class="fa fa-arrow-right ms-3"></i>
-                                    </button></a>
-                                </p>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="dropdown">
+                                Hi, <u><?php echo $data['username']?> </u> <i class="fa fa-arrow-down ms-3"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage Rooms</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage News</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage Admin</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage Comments</a></li>
+                                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                                </ul>
                             </div>
-                        </div>
                         
                     </nav>
                 </div>
