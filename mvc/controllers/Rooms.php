@@ -5,9 +5,9 @@ class Rooms extends Controller{
             "page"=>"rooms"
         ]);
     }
-    public function Admin_show(){
-        $this->view("content_layout",[
-            "page"=>"admin/rooms"
+    public function admin_show(){
+        $this->view("content_layout2",[
+            "page"=>"rooms"
         ]);
     }
 }

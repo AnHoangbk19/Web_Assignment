@@ -6,9 +6,9 @@ class Home extends Controller{
             "page"=>"home"
         ]);
     }
-    public function Admin_show(){
-        $this->view("content_layout",[
-            "page"=>"admin/home"
+    public function admin_show(){
+        $this->view("content_layout2",[
+            "page"=>"home"
         ]);
     }
 }

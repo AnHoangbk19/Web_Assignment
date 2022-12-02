@@ -7,14 +7,14 @@ class Booking extends Controller{
             "page"=>"booking"
         ]);
     }
-    public function Admin_show(){
-        $this->view("content_layout",[
-            "page"=>"admin/booking"
+    public function admin_show(){
+        $this->view("content_layout2",[
+            "page"=>"booking"
         ]);
     }
     public function manage_booking(){
-        $this->view("content_layout",[
-            "page"=>"admin/managebooking"
+        $this->view("content_layout2",[
+            "page"=>"managebooking"
         ]);
     }
     public function getBooking(){

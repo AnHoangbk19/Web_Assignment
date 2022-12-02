@@ -5,9 +5,9 @@ class Service extends Controller{
             "page"=>"service"
         ]);
     }
-    public function Admin_show(){
-        $this->view("content_layout",[
-            "page"=>"admin/service"
+    public function admin_show(){
+        $this->view("content_layout2",[
+            "page"=>"service"
         ]);
     }
 }

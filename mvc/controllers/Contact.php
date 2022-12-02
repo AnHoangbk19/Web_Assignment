@@ -5,9 +5,9 @@ class Contact extends Controller{
             "page"=>"contact"
         ]);
     }
-    public function Admin_show(){
-        $this->view("content_layout",[
-            "page"=>"admin/contact"
+    public function admin_show(){
+        $this->view("content_layout2",[
+            "page"=>"contact"
         ]);
     }
 }

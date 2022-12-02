@@ -44,7 +44,7 @@
                         if(isset($data["result"])){
                             if($data["result"]== false){
                                 echo '
-                                    <h5 style="color: #990000;"> Đăng nhập không thành công </h5>
+                                    <h5 class ="alert alert-danger"> Đăng nhập không thành công </h5>
                                 ';
                             }
                         }

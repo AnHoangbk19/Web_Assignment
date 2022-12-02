@@ -24,9 +24,9 @@ class Login extends Controller{
                 }
                 else{
                     $result_mess = true;
-                    $_SERVER['user'] = $row['username'];
-                    $this->view("content_layout",[
-                        "page"=>"admin/home",
+                    $_SESSION['user'] = $row['username'];
+                    $this->view("content_layout2",[
+                        "page"=>"home",
                         "username" => $row['username']
                     ]);
                 }
@@ -38,6 +38,13 @@ class Login extends Controller{
                 ]);
             }
         }
+    }
+    public function logout(){
+        unset($_SESSION['user']);
+        session_destroy();
+        $this->view("content_layout",[
+            "page"=>"home"
+        ]);
     }
 }
 

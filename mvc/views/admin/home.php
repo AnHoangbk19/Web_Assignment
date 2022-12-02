@@ -56,7 +56,7 @@
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
-                                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                                    <li><a class="dropdown-item" href="Login/logout">Log out</a></li>
                                 </ul>
                             </div>
                         
