@@ -47,12 +47,12 @@
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                             <div class="dropdown">
                                 <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="dropdown">
-                                Hi, <u> <?php echo $_SESSION['user'] ?> </u> <i class="fa fa-arrow-down ms-3"></i>
+                                Hi, <u> admin1 </u> <i class="fa fa-arrow-down ms-3"></i>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Edit Profile</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
-                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Rooms/manage_rooms">Manage Rooms</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage Rooms</a></li>
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
@@ -65,28 +65,3 @@
             </div>
         </div>
         <!-- Header End -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	    <script src="./assets/js/managebooking.js"></script>
-        <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Booking</button>
-
-        <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
-		<thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Email</th>
-                <th scope="col">Name</th>
-                <th scope="col">Check-in</th>
-                <th scope="col">Check-out</th>
-                <th scope="col">Adult</th>
-                <th scope="col">Child</th>
-                <th scope="col">Room</th>
-                <th scope="col">Request</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody id="data" >
-            <tr id="insert" style="text-align:center">
-                
-            </tr>
-        </tbody>
-	</table>
