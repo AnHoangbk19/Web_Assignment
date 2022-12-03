@@ -37,17 +37,17 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="http://localhost/Web_Assignment/Home/admin_show" class="nav-item nav-link active">Home</a>
-                                <a href="http://localhost/Web_Assignment/About/admin_show"class="nav-item nav-link">About</a>
-                                <a href="http://localhost/Web_Assignment/Service/admin_show" class="nav-item nav-link">Services</a>
-                                <a href="http://localhost/Web_Assignment/Rooms/admin_show" class="nav-item nav-link">Rooms</a>
-                                <a href="http://localhost/Web_Assignment/Booking/admin_show" class="nav-item nav-link">Booking</a>
-                                <a href="http://localhost/Web_Assignment/Contact/admin_show" class="nav-item nav-link">Contact</a>
+                                <a href="http://localhost/Web_Assignment/Home" class="nav-item nav-link active">Home</a>
+                                <a href="http://localhost/Web_Assignment/About"class="nav-item nav-link">About</a>
+                                <a href="http://localhost/Web_Assignment/Service" class="nav-item nav-link">Services</a>
+                                <a href="http://localhost/Web_Assignment/Rooms" class="nav-item nav-link">Rooms</a>
+                                <a href="http://localhost/Web_Assignment/Booking" class="nav-item nav-link">Booking</a>
+                                <a href="http://localhost/Web_Assignment/Contact" class="nav-item nav-link">Contact</a>
                             </div>
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                             <div class="dropdown">
                                 <button type="button" class="btn btn-primary rounded-0 py-4 px-md-5" data-bs-toggle="dropdown">
-                                Hi, <u> <?php echo $_SESSION['user'] ?> </u> <i class="fa fa-arrow-down ms-3"></i>
+                                Hi, <u><?php echo $data['username']?> </u> <i class="fa fa-arrow-down ms-3"></i>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Edit Profile</a></li>
@@ -56,7 +56,7 @@
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
-                                    <li><a class="dropdown-item" href="Login/logout">Log out</a></li>
+                                    <li><a class="dropdown-item" href="#">Log out</a></li>
                                 </ul>
                             </div>
                         

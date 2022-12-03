@@ -52,23 +52,41 @@ function get_save(id){
 				room_val: Room,
 				request_val: Request
 			},
-			success: function (response) {
 			
-				document.getElementById("email_val" + id).innerHTML = Email;
-				document.getElementById("name_val" + id).innerHTML = Name;
-				document.getElementById("checkin_val" + id).innerHTML = Checkin;
-				document.getElementById("checkout_val" + id).innerHTML = Checkout;
-				document.getElementById("adult_val" + id).innerHTML = Adult;
-				document.getElementById("child_val" + id).innerHTML = Child;
-				document.getElementById("room_val" + id).innerHTML = Room;
-				document.getElementById("message_val" + id).innerHTML = Request;
+			success: function (response) {
 				
+				document.getElementById("Email_Val" + id).innerHTML = Email;
+				document.getElementById("Name_Val" + id).innerHTML = Name;
+				document.getElementById("Check-in_Val" + id).innerHTML = Checkin;
+				document.getElementById("Check-out_Val" + id).innerHTML = Checkout;
+				document.getElementById("Adult_Val" + id).innerHTML = Adult;
+				document.getElementById("Child_Val" + id).innerHTML = Child;
+				document.getElementById("Room_Val" + id).innerHTML = Room;
+				document.getElementById("Request_Val" + id).innerHTML = Request;
 				document.getElementById("edit_button" + id).style.display = "inline-block";
 				document.getElementById("save_button" + id).style.display = "inline-block";
 				document.getElementById("delete_button" + id).style.display = "inline-block";
+
 			}
 		});
 
 	
 
+}
+function get_delete(id){
+	$.ajax
+	({
+		type: 'post',
+		url: 'http://localhost/Web_Assignment/Booking/deleteBooking',
+		data: {
+			delete_row: 'delete_row',
+			id: id,
+		},
+		success: function (response) {
+			// if (response == "success") {
+			var row = document.getElementById("row" + id);
+			row.parentNode.removeChild(row);
+			// }
+		}
+	});
 }

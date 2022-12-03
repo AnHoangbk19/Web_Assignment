@@ -21,7 +21,6 @@ class Booking extends Controller{
     }
     public function editBooking(){
         if(isset($_POST['edit_row'])){
-            
             $id = $_POST['id_val'];
             $email = $_POST['email_val'];
             $name = $_POST['name_val'];
@@ -31,12 +30,14 @@ class Booking extends Controller{
             $child = $_POST['child_val'];
             $room = $_POST['room_val'];
             $request = $_POST['request_val'];
-            echo "Hello";
-            $this->model("BookingModel")->geteditBooking($id,$name, $email, $checkin, $checkout, $adult, $child, $room, $request);
-            echo "Pass";
-            unset($_POST);
-	        exit();
-            
+            $result =$this->model("BookingModel")->geteditBooking($id,$name, $email, $checkin, $checkout, $adult, $child, $room, $request);
+      
+        }
+    }
+    public function deleteBooking(){
+        if(isset($_POST['delete_row'])){
+            $id = $_POST['id'];
+            $result = $this->model("BookingModel")->getdeleteBooking($id);
         }
     }
     public function getBooking(){

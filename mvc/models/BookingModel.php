@@ -18,13 +18,12 @@ class BookingModel extends Database{
     public function geteditBooking($id,$name, $email, $checkin, $checkout, $adult, $child, $room, $request){
         $sql = "UPDATE booking SET Name ='$name', Email = '$email', Check_in = '$checkin', Check_out = '$checkout', Adult = $adult, Child = $child, Room = '$room', Request = '$request' WHERE IdBooking = $id";
         $result = $this->_query($sql);
-        echo "update";
-        if ($result){
-            echo "success";
-        }
-        else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($this->connect);
-		}
+        return $result;
+    }
+    public function getdeleteBooking($id){
+        $sql = "DELETE FROM booking WHERE IdBooking = $id";
+        $result = $this->_query($sql);
+        return $result;
     }
 
     public function getviewAllbooking(){

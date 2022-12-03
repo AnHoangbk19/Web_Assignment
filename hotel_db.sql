@@ -58,19 +58,49 @@ INSERT INTO `news` (`userPost`, `postTime`, `content`, `newsID`) VALUES
 
 -- Create Rooms Table 
 CREATE TABLE `rooms` (
-  `id` int(11) NOT NULL PRIMARY KEY,
-  `roomName` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(11) NOT NULL,
+  `roomType` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `bath` int(11) NOT NULL,
   `bed` int(11) NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `rating` double NOT NULL,
   `price` double NOT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `products`
+--
 
--- insert value
-INSERT INTO `rooms` (`id`, `roomName`, `description`,`bath`, `bed`, `rating`, `price`, `image`) VALUES
-(1, 'King Room', 'Luxious that impress even royalties', 3, 2, 5.0, 300000, 'https://i.pinimg.com/originals/ba/9a/c5/ba9ac50e4ea914da0c57fadb558ed4f1.jpg'),
-(2, 'Nature Relaxing Room', 'Enjoy natural beauty along with our services', 2, 2, 4.8, 80000, 'https://images.squarespace-cdn.com/content/v1/4fcf5c8684aef9ce6e0a44b0/1624127208154-VVYP8K5W9LGOJ7PRQ0G7/Living+Room+Example'),
-(3, 'Aqua Room', 'Experience Living in the ocean', 2, 2, 4.7, 150000, 'https://cmsapi.manilaoceanpark.com/storage/uploads/Aqua%20Supreme%201(2)_1567482953_thumbnail.jpg');
+INSERT INTO `rooms` (`id`, `roomType`, `description`,`bath`, `bed`, `status`, `rating`, `price`, `image`) VALUES
+(1, 'Junior Suite', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 4.8, 100, './assets/img/room-1.jpg'),
+(2, 'Executive Suite', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 4.7, 100, './assets/img/room-2.jpg'),
+(3, 'Super Deluxe', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 5.0, 100, './assets/img/room-3.jpg'),
+(4, 'Super Deluxe', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 4.7, 100, './assets/img/room-3.jpg'),
+(5, 'Junior Suite', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 4.9, 100, './assets/img/room-1.jpg'),
+(6, 'Executive Suite', 'Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.', 2, 3, 'available', 4.7, 100, './assets/img/room-2.jpg'),
+(7, 'King Room', 'Luxious that impress even royalties', 3, 2, 'available', 5.0, 300000, 'https://i.pinimg.com/originals/ba/9a/c5/ba9ac50e4ea914da0c57fadb558ed4f1.jpg'),
+(8, 'Nature Room', 'Enjoy natural beauty along with our services', 2, 2, 'available', 4.8, 80000, 'https://images.squarespace-cdn.com/content/v1/4fcf5c8684aef9ce6e0a44b0/1624127208154-VVYP8K5W9LGOJ7PRQ0G7/Living+Room+Example'),
+(9, 'Aqua Room', 'Experience Living in the ocean', 2, 2, 'available', 4.7, 150000, 'https://cmsapi.manilaoceanpark.com/storage/uploads/Aqua%20Supreme%201(2)_1567482953_thumbnail.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `rooms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `rooms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;

@@ -52,7 +52,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Edit Profile</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
-                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Rooms/manage_rooms">Manage Rooms</a></li>
+                                    <li><a class="dropdown-item" href="#">Manage Rooms</a></li>
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
@@ -67,39 +67,41 @@
         <!-- Header End -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./assets/js/managebooking.js"></script>
+        <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Rooms</button>
+
         <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
 		<thead>
             <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Email</th>
-                <th scope="col">Name</th>
-                <th scope="col">Check-in</th>
-                <th scope="col">Check-out</th>
-                <th scope="col">Adult</th>
-                <th scope="col">Child</th>
-                <th scope="col">Room</th>
-                <th scope="col">Request</th>
-                <th scope="col">Action</th>
+                <th scope="col">RoomType</th>
+                <th scope="col">Bath</th>
+                <th scope="col">Bed</th>
+                <th scope="col">Status</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody id="data" >
-            <?php foreach($data["data"] as $value): ?>  
-                <tr id="row<?=$value['IdBooking']?>" style="text-align:center">
-                    <td id ="IdBooking_Val<?=$value['IdBooking']?>"><?=$value['IdBooking']?></td>
-                    <td id ="Email_Val<?=$value['IdBooking'] ?>"><?=$value['Email']?></td>
-                    <td id ="Name_Val<?=$value['IdBooking'] ?>"><?=$value['Name']?></td>
-                    <td id ="Check-in_Val<?=$value['IdBooking'] ?>"><?=$value['Check_in']?></td>
-                    <td id ="Check-out_Val<?=$value['IdBooking'] ?>"><?=$value['Check_out']?></td>
-                    <td id ="Adult_Val<?=$value['IdBooking'] ?>"><?=$value['Adult']?></td>
-                    <td id ="Child_Val<?=$value['IdBooking'] ?>"><?=$value['Child']?></td>
-                    <td id ="Room_Val<?=$value['IdBooking'] ?>"><?=$value['Room']?></td>
-                    <td id ="Request_Val<?=$value['IdBooking'] ?>"><?=$value['Request']?></td>
-                    <td >
-                        <button type="submit" class="btn btn-primary" id ="edit_button<?=$value['IdBooking'] ?>" onclick="get_edit(<?=$value['IdBooking']?>)">Edit</button>
-                        <button type="submit" class="btn btn-primary" id ="save_button<?=$value['IdBooking'] ?>" onclick="get_save(<?=$value['IdBooking']?>)">Save</button>
-                        <button type="submit" class="btn btn-primary"id = "delete_button<?=$value['IdBooking'] ?>" onclick="get_delete(<?=$value['IdBooking']?>)">Delete</button>
-                    </td>                   
-                </tr>
+            <?php $rooms = $data['rooms']; ?>
+            <?php foreach($rooms as $room): ?>
+            <tr>
+                <td><?php echo $room['id'] ?></td>
+                <td><?php echo $room['roomType'] ?></td>
+                <td><?php echo $room['bath'] ?></td>
+                <td><?php echo $room['bed'] ?></td>
+                <td><?php echo $room['status'] ?></td>
+                <td><?php echo $room['rating'] ?></td>
+                <td><?php echo $room['description'] ?></td>
+                <td><?php echo $room['price'] ?></td>
+                <td>
+                    Edit
+                    <!-- <a href="http://localhost/Web_Assignment/Rooms/edit/<?php echo $room['id'] ?>" class="btn btn-primary">Edit</a>
+                    <a href="http://localhost/Web_Assignment/Rooms/delete/<?php echo $room['id'] ?>" class="btn btn-danger">Delete</a> -->
+                </td>
+            </tr>
             <?php endforeach; ?>
+            
         </tbody>
 	</table>
