@@ -1,3 +1,8 @@
+<?php
+if (isset($_SESSION["user"])) {
+	header("Location: http://localhost/Web_Assignment/Home/admin_show");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

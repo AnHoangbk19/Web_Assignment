@@ -65,3 +65,28 @@
             </div>
         </div>
         <!-- Header End -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="./assets/js/managebooking.js"></script>
+        <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Booking</button>
+
+        <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
+		<thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Check-in</th>
+                <th scope="col">Check-out</th>
+                <th scope="col">Adult</th>
+                <th scope="col">Child</th>
+                <th scope="col">Room</th>
+                <th scope="col">Request</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="data" >
+            <tr id="insert" style="text-align:center">
+                
+            </tr>
+        </tbody>
+	</table>

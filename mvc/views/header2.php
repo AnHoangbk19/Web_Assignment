@@ -9,7 +9,7 @@ if (!isset($_SESSION["user"])) {
 <head>
     <base href="http://localhost/Web_Assignment/Home">
     <meta charset="utf-8">
-    <title>Hotelier - Hotel HTML Template</title>
+    <title>Hotelier </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
