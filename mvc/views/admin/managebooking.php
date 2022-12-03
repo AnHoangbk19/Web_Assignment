@@ -67,8 +67,6 @@
         <!-- Header End -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./assets/js/managebooking.js"></script>
-        <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Booking</button>
-
         <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
 		<thead>
             <tr>
@@ -85,8 +83,23 @@
             </tr>
         </thead>
         <tbody id="data" >
-            <tr id="insert" style="text-align:center">
-                
-            </tr>
+            <?php foreach($data["data"] as $value): ?>  
+                <tr data-id="<?=$value['IdBooking']?>" style="text-align:center">
+                    <td id ="IdBooking_Val<?=$value['IdBooking']?>"><?=$value['IdBooking']?></td>
+                    <td id ="Email_Val<?=$value['IdBooking'] ?>"><?=$value['Email']?></td>
+                    <td id ="Name_Val<?=$value['IdBooking'] ?>"><?=$value['Name']?></td>
+                    <td id ="Check-in_Val<?=$value['IdBooking'] ?>"><?=$value['Check_in']?></td>
+                    <td id ="Check-out_Val<?=$value['IdBooking'] ?>"><?=$value['Check_out']?></td>
+                    <td id ="Adult_Val<?=$value['IdBooking'] ?>"><?=$value['Adult']?></td>
+                    <td id ="Child_Val<?=$value['IdBooking'] ?>"><?=$value['Child']?></td>
+                    <td id ="Room_Val<?=$value['IdBooking'] ?>"><?=$value['Room']?></td>
+                    <td id ="Request_Val<?=$value['IdBooking'] ?>"><?=$value['Request']?></td>
+                    <td >
+                        <button type="submit" class="btn btn-primary" id ="edit_button<?=$value['IdBooking'] ?>" onclick="get_edit(<?=$value['IdBooking']?>)">Edit</button>
+                        <button type="submit" class="btn btn-primary" id ="save_button<?=$value['IdBooking'] ?>" onclick="get_save(<?=$value['IdBooking']?>)">Save</button>
+                        <button type="submit" class="btn btn-primary"id = "delete_button<?=$value['IdBooking'] ?>" onclick="get_delete(<?=$value['IdBooking']?>)">Delete</button>
+                    </td>                   
+                </tr>
+            <?php endforeach; ?>
         </tbody>
 	</table>
