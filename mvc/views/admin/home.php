@@ -50,9 +50,9 @@
                                 Hi, <u> <?php echo $_SESSION['user'] ?> </u> <i class="fa fa-arrow-down ms-3"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
-                                    <li><a class="dropdown-item" href="#">Manage Rooms</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Rooms/manage_rooms">Manage Rooms</a></li>
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
