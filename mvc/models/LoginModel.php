@@ -9,7 +9,7 @@ class LoginModel extends Database{
         return $this->_query($sql);
     }
 
-
+    
 }
 
 
