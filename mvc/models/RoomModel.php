@@ -20,5 +20,27 @@ class RoomModel extends Database{
         //mysqli_close($this->connect);
         return $room;                         
     }
+<<<<<<< Updated upstream
+=======
+
+    public function addRoom($data){
+        $sql = "INSERT INTO `rooms` (`roomType`, `description`,`bath`, `bed`, `status`, `rating`, `price`, `image`) 
+                VALUES              ('{$data['roomType']}', '{$data['description']}', '{$data['bath']}', '{$data['bed']}', '{$data['status']}', '{$data['rating']}', '{$data['price']}', '{$data['image']}')";
+        $result = mysqli_query($this->connect, $sql);
+        return $result;
+    }
+
+    public function updateRoom($data){
+        $sql = "UPDATE `rooms` SET `description` = '{$data['description']}', `bath` = '{$data['bath']}', `bed` = '{$data['bed']}', `status` = '{$data['status']}', `rating` = '{$data['rating']}', `price` = '{$data['price']}', `image` = '{$data['image']}' WHERE `rooms`.`roomType` = '{$data['roomType']}'";
+        $result = mysqli_query($this->connect, $sql);
+        return $result;
+    }
+     
+    public function deleteRoom($id){
+        $sql = "DELETE FROM `rooms` WHERE `rooms`.`id` = $id";
+        $result = mysqli_query($this->connect, $sql);
+        return $result;
+    }
+>>>>>>> Stashed changes
 }
 ?>

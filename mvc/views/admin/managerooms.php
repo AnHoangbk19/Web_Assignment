@@ -65,6 +65,7 @@
             </div>
         </div>
         <!-- Header End -->
+<<<<<<< Updated upstream
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./assets/js/managebooking.js"></script>
         <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Rooms</button>
@@ -72,6 +73,156 @@
         <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
 		<thead>
             <tr>
+=======
+
+        <!-- add room modal -->
+        <div class="modal fade" id="addRoomModal" tabindex="-1" role="dialog" aria-labelledby="addRoomModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addRoomModalLabel">Add Room</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- https://media.timeout.com/images/105859033/image.jpg -->
+                        <!-- modal form -->
+                        <div class="modal-body">
+                            <form action="http://localhost/Web_Assignment/Rooms/addRoom" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="room_type" class="col-form-label">Room Type:</label>
+                                    <input type="text" class="form-control" id="room_type" name="room_type">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_price" class="col-form-label">Room Price:</label>
+                                    <input type="text" class="form-control" id="room_price" name="room_price">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="bed" class="col-form-label">Bed:</label>
+                                    <input type="number" class="form-control" id="bed" name="bed" min="1" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bath" class="col-form-label">Bath:</label>
+                                    <input type="number" class="form-control" id="bath" name="bath" min="1" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_description" class="col-form-label">Room Description:</label>
+                                    <textarea class="form-control" id="room_description" name="room_description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_image" class="col-form-label">Room Image:</label>
+                                    <input type="text" class="form-control" id="room_image" name="room_image">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_status" class="col-form-label">Room Status:</label>
+                                    <select class="form-select" aria-label="Default select example" id="room_status" name="room_status">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">Available</option>
+                                        <option value="0">Unavailable</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_rating" class="col-form-label">Room Rating:</label>
+                                    <select class="form-select" aria-label="Default select example" id="room_rating" name="room_rating">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button name="add_Room" type="submit" class="btn btn-primary">Add Room</button>
+                                </div> 
+                            </form>
+                        </div>
+                        <!-- end modal form -->   
+                    </div>
+                </div>
+        </div>
+        <!-- add room modal end -->
+
+        <!-- edit room modal -->
+        <div class="modal fade" id="editRoomModal" tabindex="-1" role="dialog" aria-labelledby="editRoomModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="addRoomModalLabel">Update Room</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- https://media.timeout.com/images/105859033/image.jpg -->
+                        <!-- modal form -->
+                        <div class="modal-body">
+                            <form action="http://localhost/Web_Assignment/Rooms/updateRoom" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="room_type" class="col-form-label">Room Type:</label>
+                                    <input type="text" class="form-control" id="room_type" name="room_type">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_price" class="col-form-label">Room Price:</label>
+                                    <input type="text" class="form-control" id="room_price" name="room_price">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="bed" class="col-form-label">Bed:</label>
+                                    <input type="number" class="form-control" id="bed" name="bed" min="1" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bath" class="col-form-label">Bath:</label>
+                                    <input type="number" class="form-control" id="bath" name="bath" min="1" max="3">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_description" class="col-form-label">Room Description:</label>
+                                    <textarea class="form-control" id="room_description" name="room_description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_image" class="col-form-label">Room Image:</label>
+                                    <input type="text" class="form-control" id="room_image" name="room_image">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_status" class="col-form-label">Room Status:</label>
+                                    <select class="form-select" aria-label="Default select example" id="room_status" name="room_status">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">Available</option>
+                                        <option value="0">Unavailable</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="room_rating" class="col-form-label">Room Rating:</label>
+                                    <select class="form-select" aria-label="Default select example" id="room_rating" name="room_rating">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button name="update_Room" type="submit" class="btn btn-primary">Save</button>
+                                </div> 
+                            </form>
+                        </div>
+                        <!-- end modal form -->  
+                    </div>
+                </div>
+            </div>
+        <!-- edit room modal end -->
+
+                            
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="./assets/js/managebooking.js"></script>
+        <!-- <button type="submit" class="btn btn-primary me-3" onclick="showAll()">Show all Rooms</button> -->
+        <!-- open modal -->
+        <button type="submit" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#addRoomModal"> &plus;Add Room</button>
+
+        <table id="mytable" class="table table-striped" style="width:80%; margin:auto">
+		<thead>
+            <tr class="btn-dark">
+>>>>>>> Stashed changes
                 <th scope="col">Id</th>
                 <th scope="col">RoomType</th>
                 <th scope="col">Bath</th>
@@ -94,11 +245,35 @@
                 <td><?php echo $room['status'] ?></td>
                 <td><?php echo $room['rating'] ?></td>
                 <td><?php echo $room['description'] ?></td>
+<<<<<<< Updated upstream
                 <td><?php echo $room['price'] ?></td>
                 <td>
                     Edit
                     <!-- <a href="http://localhost/Web_Assignment/Rooms/edit/<?php echo $room['id'] ?>" class="btn btn-primary">Edit</a>
                     <a href="http://localhost/Web_Assignment/Rooms/delete/<?php echo $room['id'] ?>" class="btn btn-danger">Delete</a> -->
+=======
+                <td><?php echo '$'.$room['price'] ?></td>
+                <td>
+                    
+                        <button 
+                            type="submit" class="btn btn-sm btn-primary bi bi-pen" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#editRoomModal"
+                        
+                        >
+                        </button>
+                        <a href="http://localhost/Web_Assignment/Rooms/deleteRoom/<?=$room['id']?>">
+                        <button 
+                            type="submit" 
+                            class="btn btn-sm btn-dark bi bi-trash" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#deleteRoomModal"
+                            name="deleteRoom"
+                        >                        
+                        </button>
+                        </a>
+                    
+>>>>>>> Stashed changes
                 </td>
             </tr>
             <?php endforeach; ?>
