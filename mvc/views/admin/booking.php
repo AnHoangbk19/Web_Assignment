@@ -53,11 +53,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-<<<<<<< Updated upstream
-                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/viewAllBooking">Manage Booking</a></li>
-=======
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
->>>>>>> Stashed changes
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Rooms/manage_rooms">Manage Rooms</a></li>
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Admin</a></li>
