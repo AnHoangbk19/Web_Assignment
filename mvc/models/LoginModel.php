@@ -5,11 +5,14 @@ class LoginModel extends Database{
     }
 
     public function login($username){
-        $sql = "SELECT  * FROM admin WHERE username = '$username'";
+        $sql = "SELECT * FROM admin WHERE username = '$username'";
         return $this->_query($sql);
     }
 
-    
+    public function signup($user, $pass, $fullname, $phone){
+        $sql = "INSERT INTO admin VALUES ('$user', '$pass', '$fullname', '$phone', 0)";
+        return $this->_query($sql);
+    }
 }
 
 

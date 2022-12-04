@@ -45,11 +45,11 @@ if (isset($_SESSION["user"])) {
 		<div class="login-form">
             <form action="Login/login" method = "POST">
                 <div class="sign-in-htm">
-                <?php
+                    <?php
                         if(isset($data["result"])){
                             if($data["result"]== false){
                                 echo '
-                                    <h5 class ="alert alert-danger"> Đăng nhập không thành công </h5>
+                                    <h6 class ="alert alert-danger"> Đăng nhập không thành công </h6>
                                 ';
                             }
                         }
@@ -73,28 +73,45 @@ if (isset($_SESSION["user"])) {
                 </div>
             </form>
 			
-            <form action="" method = "POST">
+            <form action="Login/signup" method = "POST">
                 <div class="sign-up-htm">
+                    <?php
+                        if(isset($data["result2"])){
+                            if($data["result2"] != "success"){
+                                echo '
+                                    <script>alert("'.$data["result2"].'")</script>
+                                ';
+                            } else {
+                                echo '
+                                <script>alert("Tạo tài khoản thành công!")</script>
+                                '; 
+                            }
+                        }
+                    ?>
                     <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
+                        <input id="user" name="user" type="text" class="input">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <input id="pass" name="pass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Repeat Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <label for="rpass" class="label">Repeat Password</label>
+                        <input id="rpass" name="rpass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Email Address</label>
-                        <input id="pass" type="text" class="input">
+                        <label for="fullname" class="label">Fullname</label>
+                        <input id="fullname" name="fullname" type="text" class="input">
                     </div>
                     <div class="group">
-                        <input type="submit" class="button" value="Sign Up">
+                        <label for="phone" class="label">Number Phone</label>
+                        <input id="phone" name="phone" type="text" class="input">
                     </div>
-                    <div class="hr"></div>
+                    <div class="group">
+                        <input type="submit" name="submit2" class="button" value="Sign Up">
+                    </div>
+                    <hr>
                     <div class="foot-lnk">
                         <label for="tab-1">Already Member?</a>
                     </div>

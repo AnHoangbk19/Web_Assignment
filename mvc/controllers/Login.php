@@ -39,6 +39,44 @@ class Login extends Controller{
             }
         }
     }
+
+    public function signup(){
+        // $result_mess = 'false';
+        if(isset($_POST['submit2'])){
+            $user = $_POST['user'];
+            $pass = $_POST['pass'];
+            $rpass = $_POST['rpass'];
+            $fullname = $_POST['fullname'];
+            $phone = $_POST['phone'];
+            if (empty($user) || empty($pass) || empty($rpass) || empty($fullname) || empty($phone)){
+                $this->view("login_page",[
+                    "result2" => 'Cần điền đầy đủ thông tin!'
+                ]);
+            }
+            if ($pass != $rpass) {
+                $this->view("login_page",[
+                    "result2" => 'password và repeat password phải giống nhau!'
+                ]);
+            }
+            $kq = $this->model("LoginModel")->login($user);
+            // echo $row['username'];
+            if (mysqli_num_rows($kq) > 0){
+                $this->view("login_page",[
+                    "result2" => 'username đã tồn tại!'
+                ]);    
+            } else {
+                $kq = $this->model("LoginModel")->signup($user, $pass, $fullname, $phone);
+                $this->view("login_page",[
+                    "result2" => 'success'
+                ]);  
+            }
+        } else {
+            $this->view("login_page",[
+                "result2" => 'Lỗi đăng kí!'
+            ]);
+        }
+    }
+
     public function logout(){
         unset($_SESSION['user']);
         session_destroy();
