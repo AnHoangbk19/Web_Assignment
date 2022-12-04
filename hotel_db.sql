@@ -24,8 +24,7 @@ VALUES ('3', 'guestABC@gmail.com', 'SANTA', '11/29/2022 1:38 PM','11/29/2022 1:3
 
 -- Create Admin Table 
 CREATE TABLE `admin` (
-  Idadmin INT AUTO_INCREMENT PRIMARY KEY,
-  username varchar(30) NOT NULL,
+  username varchar(30) PRIMARY KEY,
   `password` varchar(30) NOT NULL,
   fullname varchar(50) NOT NULL,
   phone varchar(10) UNIQUE,
@@ -34,10 +33,10 @@ CREATE TABLE `admin` (
 
 -- insert value
 INSERT INTO `admin`
-VALUES (1, 'tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
-    (2, 'admin1', '654321', 'le nguyen', '0355578787', 21),
-    (3, 'admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
-    (4, 'admin3', 'gfgfdg', 'le ha nguyen', '0998874562', 7);
+VALUES ('tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
+    ('admin1', '654321', 'le nguyen', '0355578787', 21),
+    ('admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
+    ('admin3', 'gfgfdg', 'le ha nguyen', '0998874562', 7);
 
 -- Create News Table 
 CREATE TABLE `news` (
