@@ -37,6 +37,15 @@ VALUES ('tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
     ('admin1', '654321', 'le nguyen', '0355578787', 21),
     ('admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
     ('admin3', 'gfgfdg', 'le ha nguyen', '0998874562', 7);
+    
+    
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `subject` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Create News Table 
 CREATE TABLE `news` (
@@ -55,11 +64,7 @@ INSERT INTO `news` (`userPost`, `postTime`, `content`, `newsID`) VALUES
 
 -- Create Rooms Table 
 CREATE TABLE `rooms` (
-<<<<<<< Updated upstream
-  `id` int(11) AUTO_INCREMENT PRIMARY KEY,
-=======
   `id` int(11) NOT NULL,
->>>>>>> Stashed changes
   `roomType` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `bath` int(11) NOT NULL,
@@ -84,8 +89,6 @@ INSERT INTO `rooms` (`id`, `roomType`, `description`,`bath`, `bed`, `status`, `r
 (7, 'King Room', 'Luxious that impress even royalties', 3, 2, 'available', 5.0, 300000, 'https://i.pinimg.com/originals/ba/9a/c5/ba9ac50e4ea914da0c57fadb558ed4f1.jpg'),
 (8, 'Nature Room', 'Enjoy natural beauty along with our services', 2, 2, 'available', 4.8, 80000, 'https://images.squarespace-cdn.com/content/v1/4fcf5c8684aef9ce6e0a44b0/1624127208154-VVYP8K5W9LGOJ7PRQ0G7/Living+Room+Example'),
 (9, 'Aqua Room', 'Experience Living in the ocean', 2, 2, 'available', 4.7, 150000, 'https://cmsapi.manilaoceanpark.com/storage/uploads/Aqua%20Supreme%201(2)_1567482953_thumbnail.jpg');
-<<<<<<< Updated upstream
-=======
 
 --
 -- Indexes for dumped tables
@@ -107,4 +110,3 @@ ALTER TABLE `rooms`
 ALTER TABLE `rooms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
->>>>>>> Stashed changes
