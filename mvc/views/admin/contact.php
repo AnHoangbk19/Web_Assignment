@@ -54,7 +54,7 @@
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Booking/manage_booking">Manage Booking</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Rooms/manage_rooms">Manage Rooms</a></li>
                                     <li><a class="dropdown-item" href="#">Manage News</a></li>
-                                    <li><a class="dropdown-item" href="#">Manage Admin</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/Web_Assignment/Admin/viewAllAdmin">Manage Admin</a></li>
                                     <li><a class="dropdown-item" href="#">Manage Comments</a></li>
                                     <li><a class="dropdown-item" href="Login/logout">Log out</a></li>
                                 </ul>
