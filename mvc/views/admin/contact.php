@@ -86,8 +86,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
-                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                <h6 class="section-title text-center text-primary text-uppercase">Send Us</h6>
+                    <h1 class="mb-5"><span class="text-primary text-uppercase">Send</span> For Any Feedback</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-12">
