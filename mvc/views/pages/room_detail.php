@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="col-md-10">
                                         <div class="form-floating">
-                                            <<small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                            <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                         </div>
                                     </div>
                                     <div class="col-12">
