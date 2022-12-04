@@ -4,7 +4,6 @@ class Rooms extends Controller{
         $roomModel = $this->model("RoomModel");
         $rooms = $roomModel->getRoom();
 
-<<<<<<< Updated upstream
         $this->view("content_layout",[
             "page"=>"rooms",
             "rooms"=>$rooms
@@ -16,19 +15,6 @@ class Rooms extends Controller{
         $room = $roomModel->getRoomById($id);
 
         $this->view("content_layout",[
-=======
-        $this->view("content_layout",[
-            "page"=>"rooms",
-            "rooms"=>$rooms
-        ]);
-    }
-
-    function viewDetail($id){
-        $roomModel = $this->model("RoomModel");
-        $room = $roomModel->getRoomById($id);
-
-        $this->view("content_layout",[
->>>>>>> Stashed changes
             "page"=>"room_detail",
             "room"=>$room
         ]);

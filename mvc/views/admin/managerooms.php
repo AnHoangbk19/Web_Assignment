@@ -65,15 +65,6 @@
             </div>
         </div>
         <!-- Header End -->
-<<<<<<< Updated upstream
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	    <script src="./assets/js/managebooking.js"></script>
-        <button type="submit" class="btn btn-primary" onclick="showAll()">Show all Rooms</button>
-
-        <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
-		<thead>
-            <tr>
-=======
 
         <!-- add room modal -->
         <div class="modal fade" id="addRoomModal" tabindex="-1" role="dialog" aria-labelledby="addRoomModalLabel" aria-hidden="true">
@@ -222,7 +213,6 @@
         <table id="mytable" class="table table-striped" style="width:80%; margin:auto">
 		<thead>
             <tr class="btn-dark">
->>>>>>> Stashed changes
                 <th scope="col">Id</th>
                 <th scope="col">RoomType</th>
                 <th scope="col">Bath</th>
@@ -245,13 +235,6 @@
                 <td><?php echo $room['status'] ?></td>
                 <td><?php echo $room['rating'] ?></td>
                 <td><?php echo $room['description'] ?></td>
-<<<<<<< Updated upstream
-                <td><?php echo $room['price'] ?></td>
-                <td>
-                    Edit
-                    <!-- <a href="http://localhost/Web_Assignment/Rooms/edit/<?php echo $room['id'] ?>" class="btn btn-primary">Edit</a>
-                    <a href="http://localhost/Web_Assignment/Rooms/delete/<?php echo $room['id'] ?>" class="btn btn-danger">Delete</a> -->
-=======
                 <td><?php echo '$'.$room['price'] ?></td>
                 <td>
                     
@@ -273,7 +256,6 @@
                         </button>
                         </a>
                     
->>>>>>> Stashed changes
                 </td>
             </tr>
             <?php endforeach; ?>

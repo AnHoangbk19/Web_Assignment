@@ -20,8 +20,6 @@ class RoomModel extends Database{
         //mysqli_close($this->connect);
         return $room;                         
     }
-<<<<<<< Updated upstream
-=======
 
     public function addRoom($data){
         $sql = "INSERT INTO `rooms` (`roomType`, `description`,`bath`, `bed`, `status`, `rating`, `price`, `image`) 
@@ -41,6 +39,5 @@ class RoomModel extends Database{
         $result = mysqli_query($this->connect, $sql);
         return $result;
     }
->>>>>>> Stashed changes
 }
 ?>
