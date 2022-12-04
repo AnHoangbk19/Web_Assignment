@@ -134,29 +134,33 @@
                                     <div class="col-md-6">
                                         <div class="form-floating">
                                             <select class="form-select" name = "adult" id="select1">
-                                              <option value="1">Adult 1</option>
-                                              <option value="2">Adult 2</option>
-                                              <option value="3">Adult 3</option>
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
                                             </select>
-                                            <label for="select1">Select Adult</label>
+                                            <label for="select1">Select Number Adult</label>
                                           </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
                                             <select class="form-select" name = "child" id="select2">
-                                              <option value="1">Child 1</option>
-                                              <option value="2">Child 2</option>
-                                              <option value="3">Child 3</option>
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
                                             </select>
-                                            <label for="select2">Select Child</label>
+                                            <label for="select2">Select Number Child</label>
                                           </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <select class="form-select" name = "room" id="select3">
-                                              <option value="Room 1">Room 1</option>
-                                              <option value="Room 2">Room 2</option>
-                                              <option value="Room 3">Room 3</option>
+                                            <?php foreach ($data["rooms"] as $room) : ?>
+                                              <option value="<?=$room['roomType'] ?>"><?=$room['roomType'] ?></option>
+                                            <?php endforeach; ?>
                                             </select>
                                             <label for="select3">Select A Room</label>
                                           </div>

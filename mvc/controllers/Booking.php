@@ -3,13 +3,17 @@ class Booking extends Controller{
 
 
     public function show(){
+        $rooms = $this->model("RoomModel")->getRoom();
         $this->view("content_layout",[
-            "page"=>"booking"
+            "page"=>"booking",
+            "rooms" => $rooms
         ]);
     }
     public function admin_show(){
+        $rooms = $this->model("RoomModel")->getRoom();
         $this->view("content_layout2",[
-            "page"=>"booking"
+            "page"=>"booking",
+            "rooms" => $rooms
         ]);
     }
     public function viewAllBooking(){
