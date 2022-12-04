@@ -37,6 +37,15 @@ VALUES ('tringuyen', '123456', 'le tri nguyen', '0963676377', 2),
     ('admin1', '654321', 'le nguyen', '0355578787', 21),
     ('admin2', 'xzcxzc', 'le minh nguyen', '0123456789', 5),
     ('admin3', 'gfgfdg', 'le ha nguyen', '0998874562', 7);
+    
+    
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `subject` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Create News Table 
 CREATE TABLE `news` (
