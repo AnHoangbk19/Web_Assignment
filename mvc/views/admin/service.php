@@ -183,7 +183,7 @@
                     <div class='testimonial-item position-relative bg-white rounded overflow-hidden'>
                     <p>  " . $row['message'] . " </p>
                     <div class='d-flex align-items-center'>
-                        <img class='img-fluid flex-shrink-0 rounded' src='./assets/img/testimonial-1.jpg' style='width: 45px; height: 45px;'>
+                        <img class='img-fluid flex-shrink-0 rounded' src='./assets/img/ava.jpg' style='width: 45px; height: 45px;'>
                         <div class='ps-3'>
                             <h6 class='fw-bold mb-1'>  " . $row['name'] . " </h6>
                             <small>  " . $row['subject'] . " </small>
