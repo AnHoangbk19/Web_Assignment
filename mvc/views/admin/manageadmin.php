@@ -63,16 +63,18 @@
             </div>
         </div>
         <!-- Header End -->
+        <br>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./assets/js/manageadmin.js"></script>
         <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
 		<thead>
-            <tr>
+            <tr class= "btn-dark">
                 <th scope="col">Username</th>
                 <th scope="col">Password</th>
                 <th scope="col">Fullname</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Exp_year</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody id="data" >

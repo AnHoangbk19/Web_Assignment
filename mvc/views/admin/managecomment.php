@@ -63,11 +63,12 @@
             </div>
         </div>
         <!-- Header End -->
+        <br>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./assets/js/managecomment.js"></script>
         <table id="mytable" class="table table-striped " style="width:80%; margin:auto">
 		<thead>
-            <tr>
+            <tr class= "btn-dark">
                 <th scope="col">Id</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
